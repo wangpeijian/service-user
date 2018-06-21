@@ -1,0 +1,28 @@
+server:
+  port: 9911
+  servlet:
+    context-path: /service-user
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9901/eureka/
+
+spring:
+  application:
+    name: service-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/local?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&useSSL=false&serverTimezone=GMT%2b8&autoReconnect=true
+    username: root
+    password:
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+  data:
+    mongodb:
+      database: user
+      host: localhost
+      port: 27017
