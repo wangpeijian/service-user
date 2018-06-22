@@ -1,6 +1,7 @@
 package com.org.serviceuser.mvc.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class User {
 
     @RequestMapping("hello")
-    public String index(){
-        return "hello word";
+    public String index(@RequestParam String name) throws Exception {
+        throw new Exception("asdasd");
+//        return String.format("hello word %s", name);
     }
 }

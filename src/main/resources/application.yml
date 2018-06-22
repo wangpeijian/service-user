@@ -1,7 +1,5 @@
 server:
   port: 9911
-  servlet:
-    context-path: /service-user
 
 eureka:
   client:
